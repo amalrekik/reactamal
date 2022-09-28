@@ -11,6 +11,7 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import {MDBFooter, MDBContainer, MDBCol, MDBRow, MDBIcon, MDBBtn} from 'mdb-react-ui-kit';
 import Badge from 'react-bootstrap/Badge';
+import Form from 'react-bootstrap/Form';
 
 
 
@@ -92,9 +93,28 @@ function Body(){
       </div>
         <Card.Text className="para">
           notre cite vous offre une livraison rapide de votre bouquet frais et plain de vie.
-          pour commander un bouquet pour votre mariage cliquer sur "commander"
+          pour commander un bouquet pour votre mariage cliquer sur "commander" aprer donner votre mail et votre numero de tel
         </Card.Text>
-   
+        <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Votre adresse mail</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          Votre mail est privé.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formNumber">
+        <Form.Label>Numero de telephone</Form.Label>
+        <Form.Control type="tel" placeholder="numero de tel" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="confirmer" />
+      </Form.Group>
+     
+    </Form>
+
+
         <Button variant="success" onClick={handleClick2}>commander {counter} bouquet à {prix} dt</Button>
       </Card.Body>
       <Card.Footer className="text-muted">new option</Card.Footer>
